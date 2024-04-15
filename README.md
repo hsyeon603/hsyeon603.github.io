@@ -6,11 +6,11 @@ The original purpose of this theme is to be a replacement of the default Jekyll 
 
 Please check out the [demo](https://ngzhio.github.io/jekyll-theme-hamilton/).
 
-| Skins | Displays |
-| ----- | -------- |
-| Daylight | ![screenshot](screenshot.png) |
-| Sunrise/Sunset | ![screenshot](screenshot-sunrise.png) |
-| Midnight | ![screenshot](screenshot-midnight.png) |
+| Skins          | Displays                               |
+| -------------- | -------------------------------------- |
+| Daylight       | ![screenshot](screenshot.png)          |
+| Sunrise/Sunset | ![screenshot](screenshot-sunrise.png)  |
+| Midnight       | ![screenshot](screenshot-midnight.png) |
 
 ## Features <!-- omit in toc -->
 
@@ -49,49 +49,49 @@ You can choose one of the following methods to install Hamilton:
 
 - Directly specify the `jekyll-theme-hamilton` gem.
 
-    1. Add `gem 'jekyll-theme-hamilton'` into your `Gemfile`.
-    2. Add the below lines into your `_config.yml`.
+  1. Add `gem 'jekyll-theme-hamilton'` into your `Gemfile`.
+  2. Add the below lines into your `_config.yml`.
 
-        ```yml
-        plugins:
-          - jekyll-theme-hamilton
-        ```
+     ```yml
+     plugins:
+       - jekyll-theme-hamilton
+     ```
 
 - If your site is hosted on GitHub Pages, you can use [`jekyll-remote-theme`](https://github.com/benbalter/jekyll-remote-theme) to import the master branch of Hamilton.
 
-    1. Add `gem 'jekyll-remote-theme'` into your `Gemfile`.
-    2. Add the below lines into your `_config.yml`.
+  1. Add `gem 'jekyll-remote-theme'` into your `Gemfile`.
+  2. Add the below lines into your `_config.yml`.
 
-        ```yml
-        plugins:
-          - jekyll-remote-theme
+     ```yml
+     plugins:
+       - jekyll-remote-theme
 
-        remote_theme: ngzhio/jekyll-theme-hamilton
-        ```
+     remote_theme: ngzhio/jekyll-theme-hamilton
+     ```
 
 ## Configuration
 
-After installation, you can run `jekyll serve` to check out your site, but before that, *make sure* the below **required parameters** are configured in your `_config.yml`.
+After installation, you can run `jekyll serve` to check out your site, but before that, _make sure_ the below **required parameters** are configured in your `_config.yml`.
 
-| Parameters | Types | Specifications |
-|:---------- |:----- |:-------------- |
-| `title`    | string | The site title |
-| `disqus`   | string | The Disqus shortname; Unless you don't want to enable the comments system, you must specify this parameter. It is used in the production environment. |
-| `google_analytics` | string | The Google Analytics tracking ID; It is used in the production environment. |
+| Parameters         | Types  | Specifications                                                                                                                                        |
+| :----------------- | :----- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`            | string | The site title                                                                                                                                        |
+| `disqus`           | string | The Disqus shortname; Unless you don't want to enable the comments system, you must specify this parameter. It is used in the production environment. |
+| `google_analytics` | string | The Google Analytics tracking ID; It is used in the production environment.                                                                           |
 
 ### Optional Parameters
 
-| Parameters | Types | Specifications |
-|:---------- |:----- |:-------------- |
-| `author`   | string | The name of the author of the site; It would be showed in the copyright statement. |
-| `avatar`   | string | The avatar of the author of the site. |
-| `email`    | string | The email of the author of the site. |
-| `location` | string | The current living location of the author of the site. |
-| `skin`     | string | The skin name. See more information on the [Customization](#customization) section. |
-| `lang`     | string | The language of the site; The default value is `en`. |
-| `paginate` | int    | The number of posts on each page. |
-| `date_format` | string | The date format; The default value is `%b %-d, %Y`. |
-| `subscribe` | boolean | Show the subsribe feed button. |
+| Parameters    | Types   | Specifications                                                                      |
+| :------------ | :------ | :---------------------------------------------------------------------------------- |
+| `author`      | string  | The name of the author of the site; It would be showed in the copyright statement.  |
+| `avatar`      | string  | The avatar of the author of the site.                                               |
+| `email`       | string  | The email of the author of the site.                                                |
+| `location`    | string  | The current living location of the author of the site.                              |
+| `skin`        | string  | The skin name. See more information on the [Customization](#customization) section. |
+| `lang`        | string  | The language of the site; The default value is `en`.                                |
+| `paginate`    | int     | The number of posts on each page.                                                   |
+| `date_format` | string  | The date format; The default value is `%b %-d, %Y`.                                 |
+| `subscribe`   | boolean | Show the subsribe feed button.                                                      |
 
 ## Archive Pages
 
@@ -153,12 +153,6 @@ The navigation bar also supports dropdown submenus:
   url: /categories/
 - title: Tags
   url: /tags/
-- title: More
-  sublinks:
-    - title: FAQ
-      url: /faq/
-    - title: Docs
-      url: /docs/
 ```
 
 ### Social Media

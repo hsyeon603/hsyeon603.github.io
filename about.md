@@ -4,4 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Another minimal style of Jekyll theme for writers.
+# Hi!
+
+This is hsyeon's blog
+If you have any question, please send email to hsyeon603@gmail.com
