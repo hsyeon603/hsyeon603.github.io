@@ -1,6 +1,6 @@
-- title: Twitter
-  url: https://twitter.com/ngzhio
-  icon: fab fa-twitter
 - title: GitHub
-  url: https://github.com/ngzhio/jekyll-theme-hamilton
+  url: https://github.com/hsyeon603
   icon: fab fa-github
+- title: Codepen
+  url: https://codepen.io/cwglyyai-the-bold
+  icon: fab fa-codepen
