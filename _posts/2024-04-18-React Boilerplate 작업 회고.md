@@ -12,7 +12,7 @@ React 없이 작업하던 기존의 프로젝트들은 보통 CSS나 Sass로 작
 
 결과는,
 
-![개발자도구 이미지](../assets/image/image.png)<br/>
+![개발자도구 이미지](/assets/image/image.png)<br/>
 
 클래스명이 무척 아름답네요.
 
