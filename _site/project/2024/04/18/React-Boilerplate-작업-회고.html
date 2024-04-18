@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>React Boilerplate 작업 회고 | hsyeon.log</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="React Boilerplate 작업 회고" />
+<meta name="author" content="Seoyeon Hwang" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="안녕하세요, 블로그의 실질적 첫 포스팅을 React Boilerplate 작업에 대한 회고로 작성하게 되었습니다. 보일러플레이트는 계획중이던 토이 프로젝트의 프로젝트 초기 환경 설정을 진행하면서 앞으로 진행할 프로젝트들의 편의성을 위해 만들었습니다. React를 알게 되면서 React에 사용하기 적합한 스타일링 방법이 Sass일지 Styled-components일지 생각을 종종 했었는데 이번 기회에 좀 더 깊게 생각해볼 수 있었습니다. 이 글에서는 Sass 코드를 Styled-components로 재작성하며 겪은 내용을 담고 있습니다." />
+<meta property="og:description" content="안녕하세요, 블로그의 실질적 첫 포스팅을 React Boilerplate 작업에 대한 회고로 작성하게 되었습니다. 보일러플레이트는 계획중이던 토이 프로젝트의 프로젝트 초기 환경 설정을 진행하면서 앞으로 진행할 프로젝트들의 편의성을 위해 만들었습니다. React를 알게 되면서 React에 사용하기 적합한 스타일링 방법이 Sass일지 Styled-components일지 생각을 종종 했었는데 이번 기회에 좀 더 깊게 생각해볼 수 있었습니다. 이 글에서는 Sass 코드를 Styled-components로 재작성하며 겪은 내용을 담고 있습니다." />
+<link rel="canonical" href="http://localhost:4000/project/2024/04/18/React-Boilerplate-%EC%9E%91%EC%97%85-%ED%9A%8C%EA%B3%A0.html" />
+<meta property="og:url" content="http://localhost:4000/project/2024/04/18/React-Boilerplate-%EC%9E%91%EC%97%85-%ED%9A%8C%EA%B3%A0.html" />
+<meta property="og:site_name" content="hsyeon.log" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-04-18T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="React Boilerplate 작업 회고" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Seoyeon Hwang"},"dateModified":"2024-04-18T00:00:00+09:00","datePublished":"2024-04-18T00:00:00+09:00","description":"안녕하세요, 블로그의 실질적 첫 포스팅을 React Boilerplate 작업에 대한 회고로 작성하게 되었습니다. 보일러플레이트는 계획중이던 토이 프로젝트의 프로젝트 초기 환경 설정을 진행하면서 앞으로 진행할 프로젝트들의 편의성을 위해 만들었습니다. React를 알게 되면서 React에 사용하기 적합한 스타일링 방법이 Sass일지 Styled-components일지 생각을 종종 했었는데 이번 기회에 좀 더 깊게 생각해볼 수 있었습니다. 이 글에서는 Sass 코드를 Styled-components로 재작성하며 겪은 내용을 담고 있습니다.","headline":"React Boilerplate 작업 회고","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/project/2024/04/18/React-Boilerplate-%EC%9E%91%EC%97%85-%ED%9A%8C%EA%B3%A0.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"},"name":"Seoyeon Hwang"},"url":"http://localhost:4000/project/2024/04/18/React-Boilerplate-%EC%9E%91%EC%97%85-%ED%9A%8C%EA%B3%A0.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="hsyeon.log" />
+
+
+
+
+
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open%20Sans|Roboto|Roboto%20Slab|Inconsolata|Dancing%20Script|Noto%20Sans%20SC|Noto%20Sans%20TC|Noto%20Serif%20SC|Noto%20Serif%20TC|Ma%20Shan%20Zheng">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/skin.css">
+
+<!-- Begin selecting skin -->
+
+  <script>
+    const hour = (new Date()).getHours();
+    let filename = "";
+    if (hour >= 5 && hour < 7) {
+      filename = "/assets/css/skin-sunrise.css";
+    } else if (hour >= 7 && hour < 17) {
+      filename = "/assets/css/skin-daylight.css";
+    } else if (hour >= 17 && hour < 19) {
+      filename = "/assets/css/skin-sunset.css";
+    } else {
+      filename = "/assets/css/skin-midnight.css";
+    }
+    const elem = document.createElement("link");
+    elem.setAttribute("rel", "stylesheet");
+    elem.setAttribute("type", "text/css");
+    elem.setAttribute("href", filename);
+    document.getElementsByTagName("head")[0].appendChild(elem);
+  </script>
+
+<!-- End selecting skin -->
+
+<script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+
+
+  </head>
+
+  <body>
+    <div class="site-container">
+      <header class="site-header">
+        <div class="wrapper">
+  <script>
+    function clickSidebarButton() {
+      const elem = document.getElementById("site-sidebar")
+      if (elem.style.display == "none" || elem.style.display == "") {
+        elem.style.display = "block";
+      } else {
+        elem.style.display = "none";
+      }
+    }
+  </script>
+  <a class="site-sidebar-button" onclick="clickSidebarButton()"><i class="far fa-user"></i>
+  </a>
+
+  <a class="site-title" rel="author" href="/">hsyeon.log</a>
+
+  
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger" title="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+          </svg>
+        </span>
+      </label>
+
+      <ul class="trigger">
+              <li><a class="" href="/about/">About</a></li>
+            
+              <li><a class="" href="/years/">Years</a></li>
+            
+              <li><a class="" href="/categories/">Categories</a></li>
+            
+              <li><a class="" href="/tags/">Tags</a></li>
+            </ul>
+    </nav>
+  
+</div>
+
+      </header>
+      
+      <div class="site-body wrapper">
+        <aside class="site-sidebar" id="site-sidebar">
+          
+            <div class="sidebar-section"><img src="/logo.png" class="author-avatar u-photo align-center" alt="Seoyeon Hwang">
+  </div>
+
+<div class="sidebar-section">
+  <ul class="contact-list">
+    <li>
+        <i class="sidebar-icon fas fa-at"></i>
+        <span class="contact-info p-name">Seoyeon Hwang</span>
+      </li>
+    <li>
+        <i class="sidebar-icon fas fa-envelope"></i>
+        <a class="contact-info u-email" href="mailto:hsyeon603@gmail.com">hsyeon603@gmail.com</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+<div class="sidebar-section">
+    <ul class="social-icons">
+      <li>
+          <a class="social-icon" href="https://github.com/hsyeon603"><i class="fab fa-github fa-2x" title="GitHub"></i></a>
+        </li><li>
+          <a class="social-icon" href="https://codepen.io/cwglyyai-the-bold"><i class="fab fa-codepen fa-2x" title="Codepen"></i></a>
+        </li>
+    </ul>
+  </div>
+
+          
+        </aside>
+        <main class="site-main" id="site-main" aria-label="Content" tabindex="1">
+          <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+
+    <h1 class="post-title p-name" itemprop="name headline">React Boilerplate 작업 회고</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2024-04-18T00:00:00+09:00" itemprop="datePublished">
+        Apr 18, 2024
+      </time></p>
+
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>안녕하세요, 블로그의 실질적 첫 포스팅을 React Boilerplate 작업에 대한 회고로 작성하게 되었습니다.
+보일러플레이트는 계획중이던 토이 프로젝트의 프로젝트 초기 환경 설정을 진행하면서 앞으로 진행할 프로젝트들의 편의성을 위해 만들었습니다. React를 알게 되면서 React에 사용하기 적합한 스타일링 방법이 Sass일지 Styled-components일지 생각을 종종 했었는데 이번 기회에 좀 더 깊게 생각해볼 수 있었습니다. 이 글에서는 Sass 코드를 Styled-components로 재작성하며 겪은 내용을 담고 있습니다.</p>
+
+<p>React 없이 작업하던 기존의 프로젝트들은 보통 CSS나 Sass로 작성하곤 했기에 화면 요소를 생성한 후 스타일을 입히는 방식에서 스타일이 입혀진 화면 요소를 생성한다는 Styled-components의 CSS in JS 기조가 새롭게 다가왔습니다. 가장 먼저 든 의문은 ‘그럼 class를 사용하지 않는 건가?’ 하는 생각이었습니다. CSS나 Sass는 보통 class나 id를 기준으로 코드를 작성하기 때문이었죠. 그래서 무작정 Styled-components 문법대로 컴포넌트를 만들어 화면에 띄워봤습니다.</p>
+
+<p>결과는,</p>
+
+<p><img src="../assets/image/image.png" alt="개발자도구 이미지" /><br /></p>
+
+<p>클래스명이 무척 아름답네요.</p>
+
+<p><a href="https://styled-components.com/docs/basics#motivation">공식 문서</a>를 확인해보니 Styled-components의 클래스명은 고유하며 자동 생성되니 버그는 걱정말라고 합니다. 그렇다니 믿고 작업을 진행했습니다.</p>
+
+<hr />
+
+<h3 id="폰트-적용">폰트 적용</h3>
+
+<p>가장 먼저 ‘이건 어떻게 하지?’ 싶었던 건 폰트 적용입니다. 평소같으면 웹폰트를 head 태그에 넣었겠지만 왠지 느낌적으로 다른 방법을 사용해야 하지 않을까 싶었습니다. Styled-components 문서를 뒤져보니 globalStyle을 적용하는 API를 제공하고 있기에 @font-face로 적용했습니다. 당장은 boilerplate라 사용하는 폰트 수가 적어 파일을 프로젝트에 위치시켰지만, 폰트 수가 많아지는 경우도 고려해봐야할 것 같습니다.</p>
+
+<h3 id="문법">문법</h3>
+
+<p>Sass는 여러 유용한 문법들을 제공하지만 Styled-components에서는 제공하지 않는 문법들이 있었습니다.</p>
+
+<ol>
+  <li>변수 선언: Sass의 변수 선언은 css의 변수 선언으로 작성해 globalStyle에 적용했습니다.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- Sass --&gt;
+$black: #000;
+
+&lt;!-- Styled-components --&gt;
+css`
+  :root {
+    --color-black: #000;
+  }
+`
+</code></pre></div></div>
+
+<ol>
+  <li>내장 함수: percentage와 같은 내장함수는 직접 계산식을 작성했습니다.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- Sass --&gt;
+width: percentage($i / $md-columns);
+
+&lt;!-- Styled-components --&gt;
+width: ${($mdCount / grid.lgColumns) * 100}%;
+</code></pre></div></div>
+
+<ol>
+  <li>반복문: 개인적으로 반복문을 무척 유용하게 썼는데, Styled-components는 지원하지 않더군요.. 최선이 아닐 수 있지만 일단 props를 활용해봤습니다.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- Sass --&gt;
+@for $i from 1 through $sm-columns {
+    .col-sm-#{$i} {
+      width: percentage($i / $sm-columns);
+    }
+  }
+
+&lt;!-- Styled-components --&gt;
+${({ theme, $mdCount }) =&gt;
+    $mdCount &amp;&amp;
+    theme.responsive.md(`
+    width: ${($mdCount / grid.lgColumns) * 100}%;
+  `)}
+</code></pre></div></div>
+
+<ol>
+  <li>mixin: Sass에서 mixin은 재사용 가능한 스타일을 정의하기 위한 방법입니다. position center를 일일이 적용하던 시절로 돌아갈 순 없기에 Styled-components 문서를 다시 뒤져보니 ThemeProvider라는 개념을 찾았습니다. 컴포넌트를 최상위 컴포넌트에 적용하고, 컴포넌트 트리 어디서든 호출할 수 있다는 내용에 옳다구나 싶어 바로 적용했습니다.<br /></li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- Sass --&gt;
+@mixin pos-center($type: absolute) {
+  @if ($type == fixed or $type == absolute) {
+    position: $type;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+&lt;!-- Styled-components --&gt;
+export const position = {
+  center: (type: PositionValue = "absolute") =&gt; `
+		position: ${type};
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	`,
+};
+</code></pre></div></div>
+
+<h3 id="그-외">그 외</h3>
+
+<p>웹브라우저의 기본 스타일을 초기화하기 위해 적용하는 reset.css나 normalize.css와 같은 경우 각각 <a href="https://www.npmjs.com/package/styled-reset">styled-reset</a>, <a href="https://www.npmjs.com/package/styled-normalize">styled-normalize</a> 라이브러리를 활용하면 편리합니다. 저는 normalize만 적용해 globalStyle에 추가했습니다.</p>
+
+<hr />
+
+<p>###</p>
+
+<p>작업해놓고 보니 과연 이게 잘 만든 보일러플레이트인가 싶은 생각이 들지만, 쓰면서 더 좋은 방법을 알게 되면 차차 고쳐나가려 합니다. 보일러플레이트 소스코드는 <a href="https://github.com/hsyeon603/boilerplate-react">여기</a>에서 확인하실 수 있습니다. 잘못된 내용이 나 개선 방안이 있다면 깃헙 이슈로 작성해주시면 감사하겠습니다.</p>
+
+<p>여기까지 읽어주셔서 감사합니다!</p>
+
+  </div>
+
+  <footer class="post-footer">
+    
+      <div class="post-meta">
+        <i class="fas fa-folder"></i>
+        <ul class="post-taxonomies post-categories">
+          
+          
+            <li class="post-category">
+              
+              <a href="/categories/#project">project</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+
+    
+      <div class="post-meta">
+        <i class="fas fa-tags"></i>
+        <ul class="post-taxonomies post-tags">
+          
+          
+            <li class="post-tag">
+              
+              <a href="/tags/#react">react</a>
+            </li>
+          
+            <li class="post-tag">
+              
+              <a href="/tags/#styled-components">styled-components</a>
+            </li>
+          
+            <li class="post-tag">
+              
+              <a href="/tags/#toy-project">toy-project</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+
+    <nav class="post-pagination" role="navigation">
+      
+        <a class="post-previous" href="/junk/2024/04/15/first-post.html">
+          <h4 class="post-pagination-label">Prev</h4>
+          <span class="post-pagination-title">
+            <i class="fas fa-arrow-left"></i> First post
+
+          </span>
+        </a>
+      
+
+      
+    </nav>
+  </footer>
+
+  
+  
+</article>
+
+          <footer class="site-footer">
+            <div class="footer-col-wrapper">
+
+  <div class="footer-col">
+    <div class="copyright">
+      
+      
+      
+      
+      <p>Copyright © 2024 Seoyeon Hwang; All rights reserved.</p>
+      
+    </div>
+    <p>
+      Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://github.com/ngzhio/jekyll-theme-hamilton">Hamilton</a>
+    </p>
+  </div>
+
+  <div class="footer-col">
+    <p></p>
+  </div>
+</div>
+
+          </footer>
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>
